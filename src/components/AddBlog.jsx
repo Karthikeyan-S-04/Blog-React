@@ -60,7 +60,7 @@ function AddBlog() {
                     <div className='flex items-center gap-3'>
                         <label htmlFor="inputtitle" className=''>Blog Title :</label>
                     </div>
-                    <input type="text" className='w-200 h-10 border-2 indent-4' value={title} placeholder='Title' onChange={(e) => setTitle(e.target.value)} />
+                    <input type="text" className='w-200 h-10 border-2 indent-4' value={title} placeholder='Title' onChange={(e) => setTitle(e.target.value)} required/>
                 </div>
                 <div className='flex flex-col gap-3'>
                     <div className='flex items-center gap-3'>
@@ -78,13 +78,13 @@ function AddBlog() {
                     <div className='flex items-center gap-3'>
                         <label htmlFor="inputauthor" className=''>Author Name :</label>
                     </div>
-                    <input type="text" className='w-200 h-10 border-2 indent-4' value={author} placeholder='Author' onChange={(e) => setAuthor(e.target.value)} />
+                    <input type="text" className='w-200 h-10 border-2 indent-4' value={author} placeholder='Author' onChange={(e) => setAuthor(e.target.value)} required/>
                 </div>
                 <div className='flex flex-col gap-3'>
                     <div className='flex items-center gap-3'>
                         <label htmlFor="inputcontent" className=''>Blog Content :</label>
                     </div>
-                    <textarea name="" id="" className='border-2 indent-4 pt-2 w-4xl h-100' placeholder='Content' value={content} onChange={(e) => setContent(e.target.value)}></textarea>
+                    <textarea name="" id="" className='border-2 indent-4 pt-2 w-4xl h-100' placeholder='Content' value={content} onChange={(e) => setContent(e.target.value)} required></textarea>
                 </div>
                 <button type='submit' className='h-10 w-40 bg-stone-950 text-white rounded-md cursor-pointer'>{id ? 'Update' : 'Publish'}</button>
             </form>
